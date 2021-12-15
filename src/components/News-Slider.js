@@ -1,36 +1,35 @@
 import "../css/News-Slider.css";
-import React, { Component } from 'react'
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
+const api = axios.create({
+  baseURL: "https://sheltered-chamber-01043.herokuapp.com/api/",
+});
 
-
-export default class newsSlider extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {news: [], error: null,};  }
-// Fetch your restaurants immediately after the component is mounted
-async componentDidMount() {
-    let response = await fetch("https://sheltered-chamber-01043.herokuapp.com/api/articles");
-    if (!response.ok) {
-      return
-    }
-
-    let products = await response.json()
-    this.setState({ loading: false, products: products })
+export default class NewsSlider extends Component {
+  constructor() {
+    super();
+    this.state = {
+      articles: [],
+    };
   }
-    render() {
-    // Print errors if any
-    if (this.state.error) {
-      return <div>An error occured: {this.state.error.message}</div>;
-    }
-        return (
-            <div>
-                 <ul>
-          {this.state.news.map(news => (
-            <li key={news.id}>{news.title}</li>
+
+  componentDidMount = () => {
+    api.get("/articles").then((res) => {
+      console.log(res.data.data);
+      this.setState({ articles: res.data.data });
+    });
+  };
+
+  render() {
+    return (
+      <div>
+        <ul>
+          {this.state.articles.map((article) => (
+            <li key={article.id}>{article.attributes.Title}</li>
           ))}
         </ul>
-            </div>
-        )
-    }
+      </div>
+    );
+  }
 }

@@ -13,9 +13,7 @@ export default function Frontpage() {
           samfundet.
         </p>
       </div>
-      <NewsSlider>
-        
-      </NewsSlider>
+      <NewsSlider />
       <div>
         Method Slider
       </div>
