@@ -1,5 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import NewsSlider from "../components/News-Slider";
 
 export default function Frontpage() {
   return (
@@ -12,9 +13,9 @@ export default function Frontpage() {
           samfundet.
         </p>
       </div>
-      <div>
-        News Slider
-      </div>
+      <NewsSlider>
+        
+      </NewsSlider>
       <div>
         Method Slider
       </div>
