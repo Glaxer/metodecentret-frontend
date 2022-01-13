@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://sheltered-chamber-01043.herokuapp.com/api/",
+  baseURL: "https://sheltered-chamber-01043.herokuapp.com/api/"
 });
 
 export default class NewsSlider extends Component {
