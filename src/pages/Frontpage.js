@@ -14,12 +14,8 @@ export default function Frontpage() {
         </p>
       </div>
       <NewsSlider />
-      <div>
-        Method Slider
-      </div>
-      <div>
-        Themes Slider
-      </div>
+      <div>Method Slider</div>
+      <div>Themes Slider</div>
     </Container>
   );
 }

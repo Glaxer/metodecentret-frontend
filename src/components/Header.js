@@ -3,9 +3,8 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import Logo from "../images/logo.svg";
 
 export default function Header() {
-
   return (
-    <Navbar sticky="top" collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar sticky="top" collapseOnSelect expand="md">
       <Container>
         <Navbar.Brand href="/">
           <img
@@ -19,13 +18,27 @@ export default function Header() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link className="navLink" href="/">Metoder</Nav.Link>
-            <Nav.Link className="navLink" href="/">Udgivelser og projekter</Nav.Link>
-            <Nav.Link className="navLink" href="/">Temaer</Nav.Link>
-            <Nav.Link className="navLink" href="/">Om Metodecentret</Nav.Link>
-            <Nav.Link className="navLink" href="/">Kontakt</Nav.Link>
-            <Nav.Link className="navLink" href="/">Nyhedsbrev</Nav.Link>
-            <Nav.Link className="navLink" href="/">English</Nav.Link>
+            <Nav.Link className="navLink" href="/">
+              Metoder
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/">
+              Udgivelser og projekter
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/">
+              Temaer
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/">
+              Om Metodecentret
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/">
+              Kontakt
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/">
+              Nyhedsbrev
+            </Nav.Link>
+            <Nav.Link className="navLink" href="/">
+              English
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
