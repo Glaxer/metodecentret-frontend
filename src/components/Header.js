@@ -6,7 +6,7 @@ import "../css/Header.css";
 export default function Header() {
 
   return (
-    <Navbar sticky="top" collapseOnSelect expand="md" bg="dark" variant="dark">
+    <Navbar sticky="top" collapseOnSelect expand="md">
       <Container>
         <Navbar.Brand href="/">
           <img
