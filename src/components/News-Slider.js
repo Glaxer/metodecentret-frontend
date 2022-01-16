@@ -23,22 +23,24 @@ export default class NewsSlider extends Component {
 
   render() {
     return (
-      <Container className="news-container">
-        <Row>
-          {this.state.articles.map((article) => (
-            <Col>
-              <Card className="news-card" key={article.id}>
-                <Card.Img className="news-card-img" variant="top" src={Logo} />
-                <Card.Body className="news-card-body">
-                  <Card.Title className="news-card-title">{article.attributes.Title}</Card.Title>
-                  <Card.Text className="news-card-description">{article.attributes.Description}</Card.Text>
-                  <Button className="news-card-button">Læs mere</Button>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+      <div className="news-container">
+        <Container>
+          <Row>
+            {this.state.articles.map((article) => (
+              <Col>
+                <Card className="news-card" key={article.id}>
+                  <Card.Img className="news-card-img" variant="top" src={Logo} />
+                  <Card.Body className="news-card-body">
+                    <Card.Title className="news-card-title">{article.attributes.Title}</Card.Title>
+                    <Card.Text className="news-card-description">{article.attributes.Description}</Card.Text>
+                    <Button className="news-card-button">Læs mere</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
     );
   }
 }
