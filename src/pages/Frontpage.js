@@ -8,14 +8,16 @@ import "../css/Frontpage.css";
 export default function Frontpage() {
   return (
     <div>
-      <Container className="front-container">
-        <h1 className="front-header">Vi realiserer potentialet i socialt arbejde</h1>
-        <p className="front-text">
-          Metodecentret arbejder sammen med kommuner og regioner for at styrke
-          kvaliteten af sociale indsatser til gavn for udsatte borgere og
-          samfundet.
-        </p>
-      </Container>
+      <div className="front-container">
+        <Container>
+          <h1 className="front-header">Vi realiserer potentialet i socialt arbejde</h1>
+          <p className="front-text">
+            Metodecentret arbejder sammen med kommuner og regioner for at styrke
+            kvaliteten af sociale indsatser til gavn for udsatte borgere og
+            samfundet.
+          </p>
+        </Container>
+      </div>
       <NewsSlider />
       <MethodSlider />
       <ThemesSlider />
