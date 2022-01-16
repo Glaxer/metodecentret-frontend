@@ -2,7 +2,8 @@ import "../css/News-Slider.css";
 import { Card, Container, Row, Col, Button } from "react-bootstrap";
 import React, { Component } from "react";
 import axios from "axios";
-import Logo from "../images/logo.svg";
+import Img from "../images/placeholder-image.jpg";
+
 
 const api = axios.create({
   baseURL: "https://sheltered-chamber-01043.herokuapp.com/api/",
@@ -29,7 +30,7 @@ export default class NewsSlider extends Component {
             {this.state.articles.map((article) => (
               <Col>
                 <Card className="news-card" key={article.id}>
-                  <Card.Img className="news-card-img" variant="top" src={Logo} />
+                  <Card.Img className="news-card-img" variant="top" src={Img} />
                   <Card.Body className="news-card-body">
                     <Card.Title className="news-card-title">{article.attributes.Title}</Card.Title>
                     <Card.Text className="news-card-description">{article.attributes.Description}</Card.Text>
