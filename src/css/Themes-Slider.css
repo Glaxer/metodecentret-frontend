@@ -1,0 +1,28 @@
+.theme-container {
+    padding: 50px 0 75px 0;
+    background: #fff;
+  }
+
+  .theme-card {
+    background: #fff !important;
+    border: none!important;
+  }
+
+  .theme-card-img {
+    width: 100%;
+    height: 190px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .theme-card-body {
+    padding: 25px;
+    color: black;
+    min-height: 120px;
+  }
+
+  .theme-card-title {
+    font-size: 1em !important;
+  } 
