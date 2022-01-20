@@ -8,6 +8,7 @@ import Img from "../images/placeholder-image.jpg";
 const api = axios.create({
   baseURL: "https://sheltered-chamber-01043.herokuapp.com/api/",
 });
+
 export default class NewsSlider extends Component {
   constructor() {
     super();
