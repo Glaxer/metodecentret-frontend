@@ -17,7 +17,7 @@ export default class NewsSlider extends Component {
     };
   }
   componentDidMount = () => {
-    api.get("/articles").then((res) => {
+    api.get("/articles/?populate=Cover").then((res) => {
       console.log(res.data.data);
       this.setState({ articles: res.data.data });
     });
@@ -31,7 +31,7 @@ export default class NewsSlider extends Component {
             {this.state.articles.map((article) => (
               <Col>
                 <Card className="news-card" key={article.id}>
-                  <Card.Img className="news-card-img" variant="top" src={Img} />
+                  <Card.Img className="news-card-img" variant="top" src={article.attributes.Cover.data.attributes.name} />
                   <Card.Body className="news-card-body">
                     <Card.Title className="news-card-title">{article.attributes.Title}</Card.Title>
                     <Card.Text className="news-card-description">{article.attributes.Description}</Card.Text>
