@@ -17,7 +17,7 @@ export default class MethodSlider extends Component {
     }
 
     componentDidMount = () => {
-        api.get("/methods").then((res) => {
+        api.get("/methods/?populate=Cover").then((res) => {
             console.log(res.data.data);
             this.setState({ methods: res.data.data });
         });
@@ -34,7 +34,7 @@ export default class MethodSlider extends Component {
                                     <Card.Img
                                         className="method-card-img"
                                         variant="top"
-                                        src={Img}
+                                        src={method.attributes.Cover.data.attributes.name}
                                     />
                                     <Card.Body className="method-card-body">
                                         <Card.Title className="method-card-title">

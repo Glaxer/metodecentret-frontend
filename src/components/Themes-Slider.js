@@ -17,7 +17,7 @@ export default class ThemesSlider extends Component {
     }
 
     componentDidMount = () => {
-        api.get("/themes").then((res) => {
+        api.get("/themes/?populate=Cover").then((res) => {
             console.log(res.data.data);
             this.setState({ themes: res.data.data });
         });
@@ -34,7 +34,7 @@ export default class ThemesSlider extends Component {
                                     <Card.Img
                                         className="theme-card-img"
                                         variant="top"
-                                        src={Img}
+                                        src={theme.attributes.Cover.data.attributes.name}
                                     />
                                     <Card.Body className="theme-card-body">
                                         <Card.Title className="theme-card-title">
